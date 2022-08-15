@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Service
+ * Template Name: Career
  */
 get_header();
 ?>
    	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 		<?php
-			get_template_part( 'template-parts/content', 'service' );
+			get_template_part( 'template-parts/content', 'career' );
 			?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

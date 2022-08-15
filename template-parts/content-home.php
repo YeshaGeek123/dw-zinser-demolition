@@ -5,13 +5,13 @@
             <div class="col-lg-12">
                 <div class="banner-content text-center">
                     <h1 class="h1-title"><?php the_field('home_banner_title'); ?></h1>
-                    <h3 class="h3-title"><?php the_field('home_banner_sub_title');?></h3>
+                    <h3 class="h3-title"><?php the_field('home_banner_sub_title'); ?></h3>
                     <?php
-                    $phone = get_field('phone_number','options');
+                    $phone = get_field('phone_number', 'options');
                     $val = array("(", ")", " ", "-", ".");
                     $replace = array("", "", "", "", "");
                     //Phone link
-                    $phone_link = str_replace($val, $replace, $phone); 
+                    $phone_link = str_replace($val, $replace, $phone);
                     ?>
                     <div class="banner-btn">
                         <a href="#" title="Inquiry for bid" class="sec-btn"><span>Inquiry for bid</span></a>
@@ -49,7 +49,7 @@
 <!-- End of About Us -->
 
 <!-- Start of Our Services -->
-<section class="our-service-sec">
+<section class="our-service-sec" id="service">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -72,3 +72,46 @@
     </div>
 </section>
 <!-- End of Our Services -->
+
+<!-- Start of Career -->
+<section class="career-sec bg-img" style="background-image: url('<?php the_field('home_career_jobs_main_image'); ?>');">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="career-content">
+                    <h3 class="h3-title"><?php the_field('home_career_jobs_main_title'); ?></h3>
+                    <h2 class="h2-title"><?php the_field('home_career_jobs_title'); ?></h2>
+                    <p>
+                        <?php the_field('home_career_jobs_sub_title'); ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="career-btn text-left text-lg-right">
+                    <a href="#" title="employment application" class="sec-btn lg-btn"><span>employment application</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Career -->
+
+<?php
+get_template_part('template-parts/content', 'gallery');
+?>
+
+<!-- Start of Portfolio -->
+<section class="portfolio-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 m-auto">
+                <div class="portfolio-content text-center">
+                    <h2 class="h2-title"><?php the_field('home_portfolio_title'); ?></h2>
+                    <?php the_field('home_portfolio_content'); ?>
+                    <a href="#" title="Our Projects" class="sec-btn white-btn"><span>Our Projects</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Portfolio -->

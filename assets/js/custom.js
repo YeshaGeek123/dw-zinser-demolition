@@ -49,34 +49,37 @@ jQuery(document).ready(function($) {
 
     // Gallery Slider
     jQuery('.gallery-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		infinite: true,
-		dots: false,
-		arrows:false,
-		vertical: false,		
-		asNavFor: '.gallery-slider-nav',
-		responsive: [
-		{
-			breakpoint: 992,
-			settings: {
-				vertical: false,
-				dots: true,
-				autoplay:true,
-			}
-		}
-		]
-	});
-	jQuery('.gallery-slider-nav').slick({
-	  	slidesToShow: 5,
-	  	slidesToScroll: 1,
-	  	asNavFor: '.gallery-slider',
-	 	infinite:true,
-	 	dots: false,
-	 	arrows:true,
-	 	swipeToSlide: true,
-	  	focusOnSelect: true
-	});
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: false,
+        vertical: false,
+        rows: 0,
+        //variableWidth: true,
+        asNavFor: '.gallery-slider-nav',
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                vertical: false,
+                dots: true,
+                autoplay: true,
+            }
+        }]
+    });
+    jQuery('.gallery-slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.gallery-slider',
+        infinite: true,
+        dots: false,
+        arrows: true,
+        swipeToSlide: true,
+        focusOnSelect: true,
+        rows: 0,
+        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"></button>',
+    });
 
 
     jQuery('.plans-slider').slick({
