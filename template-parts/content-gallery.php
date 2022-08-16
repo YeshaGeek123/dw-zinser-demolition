@@ -1,17 +1,18 @@
 <!-- Start of Gallery -->
-<div class="gallery-sec bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/08/main-gallery-back-img.jpg');">
+<div class="gallery-sec bg-img" style="background-image: url('<?php the_field('gallery_background_image',9); ?>');">
+    <div class="back-shep"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="sec-title">
-                    <h2 class="h2-title"><span><?php the_field('gallery_main_title'); ?></span></h2>
+                    <h2 class="h2-title"><span><?php the_field('gallery_main_title',9); ?></span></h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 gallery-slider">
                 <?php
-                $gallery_image = get_field('gallery_images', 9);
+                $gallery_image = get_field('gallery_images',9);
                 if(isset($gallery_image) && !empty($gallery_image)) :
                     foreach ($gallery_image as $key => $image) :
                 ?>
@@ -26,7 +27,7 @@
         </div>
         <div class="row gallery-slider-nav gallery-thumb-slider">
             <?php
-            $gallery_image_nav = get_field('gallery_images', 9);
+            $gallery_image_nav = get_field('gallery_images',9);
             if(isset($gallery_image_nav) && !empty($gallery_image_nav)) :
                 foreach ($gallery_image_nav as $key => $image) :
             ?>

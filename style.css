@@ -646,6 +646,11 @@ textarea {
     float: none;
     width: auto;
     height: 80px;
+    transition: .3s;
+}
+
+.sticky_head .main-navigation {
+    height: 110px;
 }
 
 .main-navigation::before {
@@ -661,6 +666,7 @@ textarea {
 }
 
 .main-navigation .sec-btn {
+    font-size: 16px;
     height: 50px;
 }
 
@@ -727,6 +733,10 @@ textarea {
     align-items: center;
 }
 
+.page-template-template-contact-php .main-navigation li.menu-item-23 a,
+.page-template-template-portfolio-php .main-navigation li.menu-item-24 a,
+.page-template-template-service-php .main-navigation li.menu-item-26 a,
+.page-template-template-career-php .main-navigation li.menu-item-22 a,
 .home .main-navigation li.menu-item-48 a,
 .main-navigation li:hover a {
     color: var(--secondary-color);
@@ -1104,7 +1114,7 @@ select {
     top: 16px;
     right: 15px;
     pointer-events: none;
-    color: var(--primary-color);
+    color: #BEBEBE;
     font-size: 16px;
 }
 
@@ -1260,7 +1270,7 @@ select.form-input {
     top: 0;
     left: 0;
     width: 100%;
-    height: 26px;
+    height: 100%;
     background: 0 0;
     border: none;
     outline: none;
@@ -1287,13 +1297,14 @@ span.wpcf7-list-item-label:before,
 .comment-form-cookies-consent label:before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
     transform: translate(0, -50%);
     width: 20px;
     height: 20px;
-    border-radius: 20px;
-    border: 2px solid var(--primary-color);
+    background: var(--input-color);
+    border-radius: 0;
+    border: 1px solid var(--common-color);
     z-index: 1;
 }
 
@@ -1302,20 +1313,23 @@ span.wpcf7-list-item-label:after,
 .comment-form-cookies-consent label:after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
+    top: 9px;
+    left: 4px;
+    transform: rotate(-50deg);
     width: 12px;
-    height: 12px;
-    border-radius: 15px;
-    background: var(--primary-color);
+    height: 8px;
+    border-radius: 0;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white-color);
     opacity: 0;
     transition: .3s;
-    z-index: 0;
+    border: 2px solid var(--white-color);
+    border-top: 0;
+    border-right: 0;
+    z-index: 1;
 }
 
 input[type=radio]:checked~span:after {
@@ -1754,7 +1768,7 @@ a:hover {
     text-align: center;
     text-transform: uppercase;
     padding: 5px;
-    transform: skewX(-30deg);
+    transform: skewX(-29deg);
     cursor: pointer;
     outline: none !important;
     transition: 0.3s;
@@ -1768,7 +1782,7 @@ a:hover {
 .woocommerce a.button span,
 .woocommerce button.button span,
 .woocommerce input.button span {
-    transform: skewX(30deg);
+    transform: skewX(29deg);
 }
 
 .sec-btn:hover,
@@ -2230,12 +2244,16 @@ button.close:hover {
 /*==========Header CSS Start==========*/
 
 .site-header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 15px;
     left: 0;
     z-index: 99;
     transition: .3s;
+}
+
+.sticky_head {
+    top: 0;
 }
 
 .site-branding {
@@ -2254,7 +2272,7 @@ button.close:hover {
     width: 236px;
     height: 100%;
     background: var(--white-color);
-    transform: skewX(-30deg);
+    transform: skewX(-29deg);
     z-index: -1;
 }
 
@@ -2518,6 +2536,15 @@ button.close:hover {
     padding: 103px 0 167px;
 }
 
+.gallery-sec .back-shep {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
 .home .gallery-sec {
     padding: 103px 0 670px;
 }
@@ -2718,7 +2745,7 @@ button.close:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1135px;
+    width: 1150px;
     height: 100%;
 }
 
@@ -2961,7 +2988,7 @@ button.close:hover {
 .privacy-content p a:hover .privacy-content a:hover,
 .entry-content p a:hover,
 .entry-content a:hover {
-    color: var(--dark-color);
+    color: var(--white-color);
 }
 
 .privacy-content .list-disk li,
@@ -2995,7 +3022,6 @@ button.close:hover {
     margin: 15px 0 63px;
 }
 
-.career-form>.h3-title,
 .removal-content .h3-title,
 .service-detail-content .h3-title {
     font-size: 36px;
@@ -3003,6 +3029,7 @@ button.close:hover {
     font-style: italic;
     font-weight: bold;
     margin-bottom: 25px;
+    color: var(--white-color);
 }
 
 .service-detail-text {
@@ -3110,26 +3137,26 @@ button.close:hover {
     height: 100%;
     top: 0;
     left: 0;
-    background: -moz-linear-gradient(left, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 49%, rgba(41, 41, 41, 1) 100%);
-    background: -webkit-linear-gradient(left, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 49%, rgba(41, 41, 41, 1) 100%);
-    background: -o-linear-gradient(left, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 49%, rgba(41, 41, 41, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 49%, rgba(41, 41, 41, 1) 100%);
-    background: linear-gradient(to right, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 49%, rgba(41, 41, 41, 1) 100%);
+    background: -moz-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -o-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: linear-gradient(to bottom, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
     z-index: -1;
 }
 
-.removal-content li {
+.service-detail-content li {
     position: relative;
     display: block;
     padding-left: 31px;
     margin-bottom: 7px;
 }
 
-.removal-content li:last-child {
+.service-detail-content li:last-child {
     margin-bottom: 0;
 }
 
-.removal-content li::before {
+.service-detail-content li::before {
     content: "";
     position: absolute;
     width: 8px;
@@ -3143,7 +3170,7 @@ button.close:hover {
     z-index: 1;
 }
 
-.removal-content li::after {
+.service-detail-content li::after {
     content: "";
     position: absolute;
     width: 18px;
@@ -3173,7 +3200,7 @@ button.close:hover {
     transform: skewX(-29deg);
 }
 
-.removal-content {
+.removal-service .service-detail-content {
     margin: 146px 0 216px;
 }
 
@@ -3193,6 +3220,29 @@ button.close:hover {
     transform: skewX(29deg);
 }
 
+.career-form-sec {
+    position: relative;
+    padding: 100px 0 124px;
+}
+
+.career-form .wpcf7 .wpcf7-spinner {
+    left: 50%;
+    margin: 0 0 0 130px;
+    background: var(--white-color);
+}
+
+.main-contact-sec .contact-form .wpcf7 .wpcf7-spinner {
+    background: var(--white-color);
+}
+
+.career-form .wpcf7-spinner::before {
+    background-color: var(--black-color);
+}
+
+.main-contact-sec .contact-form .wpcf7-spinner::before {
+    background-color: var(--black-color);
+}
+
 .career-form .submit-btn {
     text-align: center;
     display: block;
@@ -3204,9 +3254,133 @@ button.close:hover {
     color: var(--white-color);
 }
 
+.career-form select {
+    color: var(--white-color) !important;
+}
+
+.career-form select option {
+    color: var(--white-color) !important;
+}
+
 .career-form .form-input::placeholder {
     color: #f7f7f7;
     opacity: 0.6;
+}
+
+.career-form .h3-title {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-bottom: 21px;
+}
+
+.form-box p {
+    margin-bottom: 64px;
+}
+
+.contact-content p {
+    font-size: 14px;
+    color: #f7f7f7;
+    margin-bottom: 42px;
+}
+
+.contact-content li {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.contact-content li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-content li .icon {
+    color: var(--primary-color);
+    margin-right: 13px;
+    font-size: 24px;
+}
+
+.contact-content li .phone {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.contact-content li a {
+    color: var(--common-color);
+    transition: .3s;
+}
+
+.contact-content li a:hover {
+    color: var(--primary-color);
+}
+
+.contact-content {
+    padding-right: 130px;
+}
+
+.contact-content li .icon .fa-phone-alt {
+    transform: rotate(265deg);
+}
+
+.main-contact-sec .contact-form {
+    padding: 0 170px 0 0;
+}
+
+.main-contact-sec {
+    position: relative;
+    padding: 74px 0 147px;
+}
+
+.main-contact-sec .contact-form .sm-btn {
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+.main-contact-sec .contact-form .sm-btn:hover {
+    background: var(--white-color);
+    border-color: var(--white-color);
+}
+
+.main-portfolio-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.main-portfolio-content p {
+    font-size: 14px;
+    color: var(--common-color);
+}
+
+.main-portfolio-content p img {
+    margin-right: 7px;
+}
+
+.main-portfolio-sec {
+    padding: 90px 0 0;
+    position: relative;
+}
+
+.portfolio-link {
+    text-align: center;
+}
+
+.portfolio-link li {
+    display: inline-flex;
+    justify-content: center;
+    width: 19%;
+    margin-bottom: 29px;
+}
+
+.page-template-template-portfolio-php .gallery-sec .back-shep {
+    display: block;
+    background: -moz-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -o-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+    background: linear-gradient(to bottom, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
 }
 
 
@@ -3241,7 +3415,7 @@ button.close:hover {
     font-size: 24px;
     line-height: 30px;
     text-transform: capitalize;
-    color: var(--dark-color);
+    color: var(--white-color);
 }
 
 .thank-text p a {
@@ -3251,7 +3425,7 @@ button.close:hover {
 }
 
 .thank-text p a:hover {
-    color: var(--dark-color);
+    color: var(--white-color);
 }
 
 
@@ -3786,15 +3960,110 @@ a.prev.page-numbers {
     }
 }
 
-@media (min-width: 2100px) {
+@media (min-width: 1921px) {
     .container {
         max-width: 1400px;
     }
+    .about-img-wp {
+        left: -320px;
+    }
+    .service-img-wp {
+        width: calc(100% + 26vw);
+    }
+    .gallery-slider .slick-list {
+        width: calc(100% + 20vw);
+        left: 373px;
+    }
+    .gallery-sec::after {
+        width: 930px;
+    }
+    .footer-img-wp {
+        width: 1460px;
+    }
+    .removal-service {
+        padding: 95px 0 210px;
+    }
 }
 
-@media screen and (max-width: 1499px) {}
+@media screen and (max-width: 1599px) {
+    .our-service-sec::before {
+        left: -300px;
+    }
+    .demolition-sec::before {
+        width: 80%;
+    }
+}
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1499px) {
+    .main-navigation ul {
+        padding-left: 0;
+    }
+    .removal-service::before {
+        display: none;
+    }
+    .contact-content {
+        padding-right: 30px;
+    }
+    .main-contact-sec .contact-form {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .site-branding {
+        transform: scale(0.9);
+    }
+    .main-navigation li {
+        margin: 0 7px;
+    }
+    .main-navigation li:last-child {
+        margin-left: 7px;
+    }
+    .h1-title {
+        font-size: 70px;
+        line-height: 90px;
+    }
+    .h2-title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .about-img-wp {
+        width: 540px;
+    }
+    .gallery-img-wp {
+        height: 450px;
+    }
+    .contact-form {
+        padding: 105px 30px 229px 0;
+    }
+    .our-service-sec::before {
+        display: none;
+    }
+    .our-service-sec::after {
+        right: -400px;
+    }
+    .slick-arrow {
+        top: auto;
+        bottom: -110px;
+        right: 250px;
+    }
+    .slick-arrow.next-arrow {
+        right: 183px;
+    }
+    .demolition-content li {
+        margin: 0 10px;
+    }
+    .service-img {
+        left: -200px;
+    }
+    .removal-content .h3-title,
+    .service-detail-content .h3-title {
+        font-size: 32px;
+    }
+    .removal-img-wp {
+        left: -120px;
+    }
+}
 
 @media screen and (max-width: 991px) {
     .for-des,
@@ -3822,6 +4091,8 @@ a.prev.page-numbers {
         margin-top: 50px;
     }
     .site-header {
+        top: 0;
+        background: var(--white-color);
         height: 80px;
     }
     .site-header .container {
@@ -3834,6 +4105,11 @@ a.prev.page-numbers {
         left: 30px;
         width: 145px;
         height: 80px;
+        transform: scale(1);
+    }
+    .main-navigation::before,
+    .site-branding::before {
+        display: none;
     }
     .menu-toggle {
         position: fixed;
@@ -3911,7 +4187,7 @@ a.prev.page-numbers {
         margin-left: 0;
         font-size: 22px;
         line-height: 28px;
-        margin-bottom: 4.4vh;
+        margin: 0 0 4.4vh;
     }
     .main-navigation ul li:last-child {
         margin-bottom: 0;
@@ -3919,8 +4195,6 @@ a.prev.page-numbers {
     .main-navigation ul li a {
         font-size: 22px;
         line-height: 28px;
-        padding-top: 0;
-        padding-bottom: 9px;
         color: var(--white-color);
     }
     .main-navigation ul li.menu-item-has-children>a:after {
@@ -3967,6 +4241,230 @@ a.prev.page-numbers {
     .footer-bottom-link {
         margin: 15px 0;
     }
+    .main-banner {
+        padding: 150px 0 710px;
+    }
+    .h1-title {
+        font-size: 65px;
+        line-height: 85px;
+    }
+    .banner-content .h3-title {
+        width: 100%;
+        margin: 0 auto 26px;
+    }
+    .about-img-wp {
+        width: 100%;
+        right: 151px;
+        left: auto;
+        margin-bottom: 29px;
+    }
+    .h2-title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 10px;
+    }
+    .about-content .h2-title {
+        margin-bottom: 10px;
+    }
+    .our-service-sec {
+        margin-top: 34px;
+        padding: 40px 0 69px;
+    }
+    .service-content p {
+        padding: 0;
+        overflow: visible;
+        -webkit-line-clamp: unset;
+        height: auto;
+        margin-bottom: 14px;
+    }
+    .service-details .service-img-wp,
+    .service-img-wp {
+        height: 400px;
+        margin-bottom: 20px;
+        width: calc(100% + 200px);
+    }
+    .our-service-sec::after {
+        display: none;
+    }
+    .career-content p {
+        margin-bottom: 23px;
+    }
+    .career-sec {
+        padding: 69px 0 80px;
+    }
+    .home .gallery-sec {
+        padding: 69px 0 152px;
+    }
+    .gallery-slider-nav .slick-list {
+        left: 0;
+        margin: 0;
+    }
+    .gallery-img-wp {
+        height: 400px;
+    }
+    .slick-arrow {
+        left: 50%;
+        margin-left: -70px;
+    }
+    .slick-arrow.next-arrow {
+        left: auto;
+        right: 50%;
+        margin-right: -70px;
+    }
+    .gallery-slider-nav .slick-list {
+        margin: 0;
+        left: 0;
+    }
+    .gallery-sec .h2-title {
+        margin-bottom: 28px;
+    }
+    .portfolio-sec {
+        margin: 0 0 80px;
+    }
+    .gallery-sec::after,
+    .gallery-slider-nav {
+        display: none;
+    }
+    .gallery-slider .slick-list {
+        left: 0;
+        width: 100%;
+        transform: skewX(0deg);
+    }
+    .gallery-img-wp {
+        transform: skewX(0deg);
+    }
+    .gallery-img {
+        left: 0;
+    }
+    .portfolio-content p {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+    .portfolio-content .h2-title {
+        margin-bottom: 9px;
+    }
+    .contact-form {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .top-footer {
+        padding: 74px 0 0;
+    }
+    .footer-map {
+        height: auto;
+    }
+    .footer-frame {
+        width: calc(100% + 530px);
+        height: 400px;
+        left: 90px;
+    }
+    .map-link {
+        left: 160px;
+        width: 300px;
+        height: 200px;
+        padding: 0 50px;
+    }
+    .menu-wp {
+        display: block;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .footer-menu {
+        margin-bottom: 10px;
+    }
+    .footer-bottom-box {
+        padding: 40px 0;
+    }
+    .contact-form h3 {
+        margin-bottom: 22px;
+    }
+    .main-navigation li:last-child {
+        margin: 0;
+    }
+    .main-service .our-service-sec {
+        padding: 130px 0 0;
+    }
+    .service-detail-text {
+        padding: 0;
+    }
+    .demolition-sec::before {
+        display: none;
+    }
+    .demolition-sec .sec-title {
+        margin-bottom: 30px;
+    }
+    .demolition-sec {
+        padding: 80px 0 0;
+    }
+    .demolition-content li {
+        margin: 0 0 20px;
+    }
+    .demolition-content ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 33px;
+    }
+    .demolition-content li .icon {
+        margin: 0 auto 15px;
+        left: 0;
+    }
+    .demolition-content li:last-child {
+        margin: 0;
+    }
+    .our-service-sec.service-details {
+        margin: 0;
+        padding: 40px 0 0;
+    }
+    .service-detail-content {
+        padding: 15px 0 0 0;
+    }
+    .removal-service {
+        padding: 0 0 60px;
+    }
+    .removal-img-wp {
+        width: calc(100% + 260px);
+        height: 400px;
+        left: -140px;
+        margin-bottom: 20px;
+    }
+    .removal-service .service-detail-content {
+        margin: 0;
+    }
+    .career-form-sec {
+        padding: 40px 0 124px;
+    }
+    .main-portfolio-sec {
+        padding: 50px 0 0;
+    }
+    .portfolio-link li {
+        width: 50%;
+        display: inline-block;
+        float: left;
+    }
+    .gallery-sec {
+        padding: 30px 0 167px;
+    }
+    .inner-banner-content .h1-title {
+        font-size: 7vw;
+        line-height: 60px;
+    }
+    .main-contact-sec {
+        padding: 30px 0 40px;
+    }
+    .contact-content {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .contact-content p {
+        margin-bottom: 27px;
+    }
+    .inner-banner {
+        padding: 140px 0 0;
+    }
+    .inner-page-text {
+        padding: 60px 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -3980,6 +4478,27 @@ a.prev.page-numbers {
     .modal-dialog {
         max-width: unset;
         width: calc(100vw - 60px);
+    }
+    .h2-title {
+        font-size: 42px;
+        line-height: 52px;
+        margin-bottom: 10px;
+    }
+    .h3-title {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .footer-menu li {
+        margin: 0 12px;
+    }
+    .footer-frame {
+        left: 100px;
+    }
+    .map-link {
+        left: 170px;
+    }
+    .inner-banner-content .h1-title {
+        font-size: 6vw;
     }
 }
 
@@ -4012,6 +4531,105 @@ a.prev.page-numbers {
     }
     .page-numbers li {
         margin-bottom: 10px;
+    }
+    .h1-title {
+        font-size: 12vw;
+        line-height: 60px;
+    }
+    .banner-btn .sec-btn {
+        display: flex;
+    }
+    .banner-btn .sec-btn+.sec-btn {
+        margin: 20px 0 0;
+    }
+    .banner-btn {
+        display: inline-block;
+        text-align: center;
+    }
+    .about-img-wp {
+        right: 30px;
+    }
+    .gallery-img-wp,
+    .service-img-wp {
+        height: 300px;
+    }
+    .h2-title {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .career-sec {
+        padding: 49px 0 60px;
+    }
+    .our-service-sec {
+        margin-top: 15px;
+        padding: 40px 0 51px;
+    }
+    .contact-form h3 {
+        margin-bottom: 22px;
+    }
+    .service-img-wp {
+        left: 90px;
+    }
+    .home .gallery-sec {
+        padding: 69px 0 132px;
+    }
+    .map-link,
+    .footer-frame {
+        transform: skewX(-15deg);
+    }
+    .map-link ul,
+    .footer-frame iframe {
+        transform: skewX(15deg);
+    }
+    .portfolio-sec {
+        margin: 0 0 60px;
+    }
+    .footer-frame {
+        left: 30px;
+    }
+    .map-link {
+        left: 77px;
+        width: 250px;
+        height: 160px;
+        padding: 0 0 0 20px;
+    }
+    .footer-menu li {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .footer-other-link p a {
+        display: block;
+    }
+    .top-footer {
+        padding: 54px 0 0;
+    }
+    .service-details .service-img-wp,
+    .service-img-wp {
+        height: 300px;
+    }
+    .demolition-sec .sec-title h2 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .career-form .h3-title {
+        font-size: 32px;
+    }
+    .portfolio-link li {
+        width: 100%;
+    }
+    .inner-banner-content .h1-title {
+        font-size: 7vw;
+        line-height: 50px;
+    }
+    .submit-btn {
+        text-align: center;
+        display: block;
+        margin-left: 0;
+    }
+    .contact-form .wpcf7 .wpcf7-spinner {
+        left: 50%;
+        margin: 0 0 0 75px;
     }
 }
 
@@ -4051,6 +4669,28 @@ a.prev.page-numbers {
     .common-popup-text {
         padding: 20px 15px !important;
         max-height: 75vh;
+    }
+    .footer-frame {
+        left: 40px;
+    }
+    .map-link li {
+        font-size: 13px;
+    }
+    .map-link li a {
+        font-size: 14px;
+    }
+    .map-link {
+        width: 210px;
+        left: 87px;
+    }
+    .career-form .wpcf7 .wpcf7-spinner {
+        margin: 0 0 0 122px;
+    }
+    .contact-content li .phone {
+        font-size: 28px;
+    }
+    .inner-banner-content .h1-title {
+        line-height: 40px;
     }
 }
 

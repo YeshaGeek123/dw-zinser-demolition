@@ -145,20 +145,22 @@ function dw_zinser_demolition_scripts() {
 	wp_enqueue_style('dw-zinser-demolition-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '20151215');
 	wp_enqueue_style('dw-zinser-demolition-fancybox-min', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), '20151215');
 	wp_enqueue_style('dw-zinser-demolition-simplebar-css', get_template_directory_uri() . '/assets/css/simplebar.css', array(), '20151215');
+	wp_enqueue_style('dw-zinser-demolition-datepicker-css', get_template_directory_uri() . '/assets/css/jquery.datetimepicker.min.css', array(), '20151215');
 	
 	wp_enqueue_style( 'dw-zinser-demolition-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_script('jquery');
 	wp_style_add_data( 'dw-zinser-demolition-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'dw-zinser-demolition-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script('dw-zinser-demolition-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true);
 	wp_enqueue_script('dw-zinser-demolition-simplebar-js', get_template_directory_uri() . '/assets/js/simplebar.js', array(), '20151215', true);
 	wp_enqueue_script('dw-zinser-demolition-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true);
 	wp_enqueue_script('dw-zinser-demolition-fancybox-min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), '20151215', true);
+	wp_enqueue_script('dw-zinser-demolition-datepicker-js', get_template_directory_uri() . '/assets/js/jquery.datetimepicker.full.min.js', array(), '20151215');
 	wp_enqueue_script('dw-zinser-demolition-wow-min', get_template_directory_uri() . '/assets/js/wow.min.js', array(), '20151215', true);
 	wp_enqueue_script('dw-zinser-demolition-font-awesome-min', get_template_directory_uri() . '/assets/js/font-awesome.min.js', array(), '20151215', true);
 	wp_enqueue_script('dw-zinser-demolition-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), rand(1000, 10000), true);
-	//wp_localize_script('dw-zinser-demolition-custom', 'custom_call', ['ajaxurl' => admin_url('admin-ajax.php')]);
+	wp_localize_script('dw-zinser-demolition-custom', 'custom_call', ['ajaxurl' => admin_url('admin-ajax.php')]);
+	wp_enqueue_script( 'dw-zinser-demolition-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

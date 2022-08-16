@@ -64,7 +64,7 @@
 								?>
 							</div>
 							<div class="for-des">
-								<a href="#" title="Inquiry for bid" class="sec-btn"><span>Inquiry for bid</span></a>
+								<a href="<?php the_permalink(171); ?>" title="Inquiry for bid" class="sec-btn"><span>Inquiry for bid</span></a>
 							</div>
 						</nav>
 					</div>

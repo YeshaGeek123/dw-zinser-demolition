@@ -2,19 +2,22 @@
 /*
   Template Name: Without Sidebar
  */
-  get_header();
+get_header();
 ?>
-<section class="main-banner inner-banner" style=" background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2020/05/InteriorHeaderImage.jpg');">
+<!-- Start of Inner Banner -->
+<section class="inner-banner">
+    <div class="inner-banner-back bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/08/banner-img.jpg');"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
-                <div class="banner-text">
+            <div class="col-lg-12">
+                <div class="banner-content text-center">
                     <h1 class="h1-title"><?php the_title(); ?></h1>
                 </div>
             </div>
         </div>
     </div>
-</section><!-- emd of main-banner -->
+</section>
+<!-- End of Inner Banner -->
 
 <div class="inner-page-text">
     <div class="container">
@@ -25,28 +28,30 @@
                         <?php
                         while (have_posts()) :
                             the_post();
-                            ?>
+                        ?>
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                
+
                                 <?php dw_zinser_demolition_post_thumbnail(); ?>
                                 <div class="entry-content">
                                     <?php
                                     the_content(sprintf(
                                         wp_kses(
                                             /* translators: %s: Name of current post. Only visible to screen readers */
-                                            __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'tree-landscaping'), array(
+                                            __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'tree-landscaping'),
+                                            array(
                                                 'span' => array(
                                                     'class' => array(),
                                                 ),
                                             )
-                                        ), get_the_title()
+                                        ),
+                                        get_the_title()
                                     ));
-                           
+
                                     ?>
                                 </div><!-- .entry-content -->
                             </article><!-- #post-the_ID(); -->
-                            <?php
-                           
+                        <?php
+
                         endwhile; // End of the loop.
                         ?>
                     </main><!-- #main -->
@@ -57,4 +62,3 @@
 </div>
 <?php
 get_footer();
-

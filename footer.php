@@ -15,7 +15,7 @@
 <footer id="colophon" class="site-footer">
 	<div class="top-footer">
 		<div class="footer-img-wp">
-			<div class="footer-img bg-img" style="background-image: url('<?php the_field('footer_image'); ?>');"></div>
+			<div class="footer-img bg-img" style="background-image: url('<?php the_field('footer_image','options'); ?>');"></div>
 		</div>
 		<div class="container">
 			<div class="row">
@@ -103,7 +103,6 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
 </body>
 
 </html>

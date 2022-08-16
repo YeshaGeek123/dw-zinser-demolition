@@ -14,7 +14,7 @@
                     $phone_link = str_replace($val, $replace, $phone);
                     ?>
                     <div class="banner-btn">
-                        <a href="#" title="Inquiry for bid" class="sec-btn"><span>Inquiry for bid</span></a>
+                        <a href="<?php the_permalink(171); ?>" title="Inquiry for bid"  class="sec-btn"><span>Inquiry for bid</span></a>
                         <a href="tel:<?php echo $phone_link; ?>" title="Call <?php echo $phone;  ?>" class="sec-btn white-btn"><span>call <span class="callus"><?php echo $phone; ?></span></span></a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
 <section class="our-service-sec" id="service">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 order-2 order-lg-1">
                 <?php
                 $service_learn_more__title = strip_tags(get_field('home_service_title'));
                 ?>
@@ -63,7 +63,7 @@
                     <a href="<?php the_field('home_service_page_link'); ?>" title="<?php echo $service_learn_more__title; ?>, Learn More" class="learn-more"><span>Learn More</span> <span class="icon"></span></a>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 order-1 order-lg-2">
                 <div class="service-img-wp">
                     <div class="service-img bg-img" style="background-image: url('<?php the_field('home_service_image'); ?>');"></div>
                 </div>
