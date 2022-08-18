@@ -2710,10 +2710,10 @@ button.close:hover {
 
 .footer-bottom-link ul li {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
     display: inline-block;
-    padding-right: 8px;
-    margin-right: 8px;
+    padding-right: 10px;
+    margin-right: 10px;
     border-right: 1px solid var(--common-color);
 }
 
@@ -2726,7 +2726,7 @@ button.close:hover {
 .footer-bottom-link ul li a {
     font-family: var(--saira-font);
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
     color: var(--common-color);
     transition: 0.3s;
 }
@@ -4744,6 +4744,10 @@ a.prev.page-numbers {
     }
     .career-form .h3-title {
         font-size: 22px;
+    }
+    .footer-bottom-link ul li {
+        padding-right: 6px;
+        margin-right: 6px;
     }
 }
 
