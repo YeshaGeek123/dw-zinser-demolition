@@ -29,22 +29,22 @@
 				</div>
 				<div class="col-lg-7">
 					<div class="footer-map">
-						<div class="map-link">
-							<ul>
-								<li>
-									<span class="icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="13.509" height="16" viewBox="0 0 13.509 16">
-											<path id="location" d="M15.062,4A6.763,6.763,0,0,0,5.5,13.562l4.224,4.224a.77.77,0,0,0,1.116,0h0l4.224-4.224A6.783,6.783,0,0,0,15.062,4ZM10.28,12.207h0A3.4,3.4,0,0,1,6.853,8.78,3.47,3.47,0,0,1,10.28,5.273,3.4,3.4,0,0,1,13.707,8.7,3.47,3.47,0,0,1,10.28,12.207Z" transform="translate(-3.525 -2.025)" fill="#d6d6d6" opacity="0.5" />
-										</svg>
-									</span>
-									<span class="text">Main Office</span>
-								</li>
-								<li>
-									<a href="<?php the_field('address_link','options'); ?>" target="_blank" title="<?php the_field('address','options'); ?>"><?php the_field('address','options'); ?></a>
-								</li>
-							</ul>
-						</div>
 						<div class="footer-frame">
+							<div class="map-link">
+								<ul>
+									<li>
+										<span class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="13.509" height="16" viewBox="0 0 13.509 16">
+												<path id="location" d="M15.062,4A6.763,6.763,0,0,0,5.5,13.562l4.224,4.224a.77.77,0,0,0,1.116,0h0l4.224-4.224A6.783,6.783,0,0,0,15.062,4ZM10.28,12.207h0A3.4,3.4,0,0,1,6.853,8.78,3.47,3.47,0,0,1,10.28,5.273,3.4,3.4,0,0,1,13.707,8.7,3.47,3.47,0,0,1,10.28,12.207Z" transform="translate(-3.525 -2.025)" fill="#d6d6d6" opacity="0.5" />
+											</svg>
+										</span>
+										<span class="text">Main Office</span>
+									</li>
+									<li>
+										<a href="<?php the_field('address_link','options'); ?>" target="_blank" title="<?php the_field('address','options'); ?>"><?php the_field('address','options'); ?></a>
+									</li>
+								</ul>
+							</div>
 							<iframe src="<?php the_field('iframe_link','options'); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
@@ -103,6 +103,7 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<!-- Estimate Form  -->
 </body>
 
 </html>

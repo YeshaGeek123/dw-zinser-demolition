@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="inner-banner-content text-center">
-                    <h1 class="h1-title"><?php the_field('service_banner_title'); ?></h1>
+                    <h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php the_field('service_banner_title'); ?></h1>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
     <section class="our-service-sec service-details">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1">
+                <div class="col-lg-6 order-2 order-lg-1 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="service-detail-content">
                         <h3 class="h3-title"><?php the_field('service_details_title'); ?></h3>
                         <div class="service-detail-text">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2">
+                <div class="col-lg-6 order-1 order-lg-2 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="service-img-wp">
                         <div class="service-img bg-img" style="background-image: url('<?php the_field('service_details_image'); ?>');"></div>
                     </div>
@@ -44,13 +44,13 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="sec-title">
-                        <h2><?php the_field('services_include_title'); ?></h2>
+                        <h2 class="wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php the_field('services_include_title'); ?></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="demolition-content">
+                    <div class="demolition-content wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <?php the_field('services_include_content'); ?>
                         <ul>
                             <?php
@@ -88,7 +88,7 @@ if(have_rows('sub_services_details')):
     <section class="our-service-sec service-details">
         <div class="container">
             <div class="row odd">
-                <div class="col-lg-6 order-2 order-lg-1">
+                <div class="col-lg-6 order-2 order-lg-1 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="service-detail-content">
                         <?php
                         if(!empty($sub_service_title)):
@@ -125,7 +125,7 @@ if(have_rows('sub_services_details')):
                         ?> 
                     </div>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2">
+                <div class="col-lg-6 order-1 order-lg-2 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="service-img-wp">
                         <div class="service-img bg-img" style="background-image: url('<?php echo  $sub_service_image; ?>');"></div>
                     </div>
@@ -138,12 +138,12 @@ if(have_rows('sub_services_details')):
     <div class="removal-service">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="removal-img-wp">
                         <div class="removal-img bg-img" style="background-image: url('<?php echo  $sub_service_image; ?>');"></div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                     <div class="service-detail-content">
                         <?php
                             if(!empty($sub_service_title)):

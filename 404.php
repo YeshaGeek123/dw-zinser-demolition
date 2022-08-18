@@ -19,7 +19,7 @@ get_header();
         <div class="row">
             <div class="col-lg-12">
                 <div class="inner-banner-content text-center">
-				<h1 class="h1-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'redeluxe' ); ?></h1>
+				<h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'redeluxe' ); ?></h1>
                 </div>
             </div>
         </div>

@@ -1126,10 +1126,14 @@ span.wpcf7-not-valid-tip {
     position: relative;
     font-size: 14px;
     line-height: 24px;
-    color: var(--white-color);
+    color: var(--red-color);
     top: -2px;
     margin-bottom: -24px;
     text-align: left;
+}
+
+.top-footer .contact-form span.wpcf7-not-valid-tip {
+    color: var(--white-color);
 }
 
 .wpcf7-form-control-wrap {
@@ -1147,11 +1151,18 @@ span.wpcf7-not-valid-tip {
 .wpcf7 form.unaccepted .wpcf7-response-output {
     margin: 20px 0;
     padding: 3px 10px;
-    border: 2px solid var(--white-color);
-    color: var(--white-color);
+    border: 2px solid var(--red-color);
+    color: var(--red-color);
     font-size: 14px;
     line-height: 24px;
     text-align: left;
+}
+
+.top-footer .contact-form .wpcf7-form.invalid .wpcf7-response-output,
+.top-footer .contact-form .wpcf7-form.invalid .wpcf7-response-output,
+.top-footer .contact-form .wpcf7 form.unaccepted .wpcf7-response-output {
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
 }
 
 .wpcf7 form.sent .wpcf7-response-output {
@@ -1251,6 +1262,7 @@ select.form-input {
 }
 
 .submit-btn .sm-btn {
+    font-size: 18px;
     font-family: var(--saira-font);
 }
 
@@ -1391,6 +1403,7 @@ span.wpcf7-list-item,
 .woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox,
 .woocommerce form .form-row label {
     position: relative;
+    margin: 0;
 }
 
 .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
@@ -2374,7 +2387,7 @@ button.close:hover {
     width: 100%;
     height: 280px;
     bottom: 0;
-    right: 76px;
+    right: 75px;
     background: -moz-linear-gradient(top, rgba(4, 148, 180, 0) 0%, rgba(4, 148, 180, 0.6) 100%);
     background: -webkit-linear-gradient(top, rgba(4, 148, 180, 0) 0%, rgba(4, 148, 180, 0.6) 100%);
     background: -o-linear-gradient(top, rgba(4, 148, 180, 0) 0%, rgba(4, 148, 180, 0.6) 100%);
@@ -2745,7 +2758,7 @@ button.close:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1150px;
+    width: 1170px;
     height: 100%;
 }
 
@@ -2786,15 +2799,16 @@ button.close:hover {
 }
 
 .footer-map {
+    position: relative;
     height: 100%;
+    margin: 0 0 0 40px;
 }
 
 .footer-frame {
     position: relative;
-    width: calc(100% + 37vw);
+    width: calc(100% + 38vw);
     height: calc(100% + 15px);
     transform: skewX(-29deg);
-    left: 45px;
     overflow: hidden;
 }
 
@@ -2804,17 +2818,17 @@ button.close:hover {
     transform: skewX(29deg);
     position: absolute;
     top: 0;
-    left: -270px;
+    left: -300px;
 }
 
 .map-link {
     background: #292929;
-    transform: skewX(-29deg);
+    transform: skewX(0deg);
     width: 342px;
     height: 269px;
     position: absolute;
     top: 0;
-    left: 208px;
+    left: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -3055,23 +3069,26 @@ button.close:hover {
 }
 
 .demolition-sec {
-    padding: 125px 0 0;
+    padding: 64px 0 0;
     position: relative;
 }
 
-.demolition-sec::before {
-    content: "";
-    position: absolute;
-    width: 1678px;
-    height: 213px;
-    background: var(--primary-color);
-    transform: skewX(29deg);
-    top: 65px;
-    left: -70px;
+.demolition-sec .sec-title {
+    position: relative;
+    padding: 60px 0 50px;
+    margin-bottom: 48px;
 }
 
-.demolition-sec .sec-title {
-    margin-bottom: 97px;
+.demolition-sec .sec-title::before {
+    content: "";
+    position: absolute;
+    width: 1700px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: skewX(29deg);
+    top: 0;
+    right: -370px;
+    z-index: -1;
 }
 
 .demolition-content ul {
@@ -3335,6 +3352,7 @@ button.close:hover {
 .main-contact-sec .contact-form .sm-btn {
     border-color: var(--secondary-color);
     background: var(--secondary-color);
+    color: var(--dark-color);
 }
 
 .main-contact-sec .contact-form .sm-btn:hover {
@@ -3381,6 +3399,21 @@ button.close:hover {
     background: -o-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
     background: -ms-linear-gradient(top, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
     background: linear-gradient(to bottom, rgba(41, 41, 41, 1) 0%, rgba(77, 77, 77, 0) 50%, rgba(41, 41, 41, 1) 100%);
+}
+
+.page-template-template-inquiry-php .career-form .wpcf7-list-item {
+    display: block;
+}
+
+.page-template-template-inquiry-php .career-form span.wpcf7-list-item-label::before {
+    border-radius: 50%;
+}
+
+.page-template-template-inquiry-php .career-form span.wpcf7-list-item-label::after {
+    border: 0;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white-color);
 }
 
 
@@ -3983,14 +4016,14 @@ a.prev.page-numbers {
     .removal-service {
         padding: 95px 0 210px;
     }
+    .demolition-sec .sec-title::before {
+        width: 250%;
+    }
 }
 
 @media screen and (max-width: 1599px) {
     .our-service-sec::before {
         left: -300px;
-    }
-    .demolition-sec::before {
-        width: 80%;
     }
 }
 
@@ -4006,6 +4039,9 @@ a.prev.page-numbers {
     }
     .main-contact-sec .contact-form {
         padding: 0;
+    }
+    .demolition-sec .sec-title::before {
+        right: -80px;
     }
 }
 
@@ -4029,6 +4065,7 @@ a.prev.page-numbers {
     }
     .about-img-wp {
         width: 540px;
+        left: -40px;
     }
     .gallery-img-wp {
         height: 450px;
@@ -4281,7 +4318,7 @@ a.prev.page-numbers {
     .service-img-wp {
         height: 400px;
         margin-bottom: 20px;
-        width: calc(100% + 200px);
+        width: calc(100% + 225px);
     }
     .our-service-sec::after {
         display: none;
@@ -4352,6 +4389,7 @@ a.prev.page-numbers {
     }
     .footer-map {
         height: auto;
+        margin: 0;
     }
     .footer-frame {
         width: calc(100% + 530px);
@@ -4359,7 +4397,6 @@ a.prev.page-numbers {
         left: 90px;
     }
     .map-link {
-        left: 160px;
         width: 300px;
         height: 200px;
         padding: 0 50px;
@@ -4387,10 +4424,8 @@ a.prev.page-numbers {
     .service-detail-text {
         padding: 0;
     }
-    .demolition-sec::before {
-        display: none;
-    }
     .demolition-sec .sec-title {
+        padding: 40px 0 50px;
         margin-bottom: 30px;
     }
     .demolition-sec {
@@ -4423,7 +4458,7 @@ a.prev.page-numbers {
         padding: 0 0 60px;
     }
     .removal-img-wp {
-        width: calc(100% + 260px);
+        width: calc(100% + 280px);
         height: 400px;
         left: -140px;
         margin-bottom: 20px;
@@ -4450,7 +4485,7 @@ a.prev.page-numbers {
         line-height: 60px;
     }
     .main-contact-sec {
-        padding: 30px 0 40px;
+        padding: 30px 0 60px;
     }
     .contact-content {
         padding: 0;
@@ -4464,6 +4499,24 @@ a.prev.page-numbers {
     }
     .inner-page-text {
         padding: 60px 0;
+    }
+    .career-btn {
+        padding: 0 0 0 10px;
+    }
+    .career-btn .sec-btn {
+        width: 270px;
+    }
+    .demolition-sec .sec-title::before {
+        right: auto;
+        transform: skewX(0);
+        width: 140%;
+        left: -80px;
+    }
+    .main-contact-sec .contact-form {
+        margin-bottom: 0;
+    }
+    .form-box p {
+        margin-bottom: 27px;
     }
 }
 
@@ -4493,9 +4546,6 @@ a.prev.page-numbers {
     }
     .footer-frame {
         left: 100px;
-    }
-    .map-link {
-        left: 170px;
     }
     .inner-banner-content .h1-title {
         font-size: 6vw;
@@ -4549,6 +4599,7 @@ a.prev.page-numbers {
     .about-img-wp {
         right: 30px;
     }
+    .removal-img-wp,
     .gallery-img-wp,
     .service-img-wp {
         height: 300px;
@@ -4573,25 +4624,34 @@ a.prev.page-numbers {
     .home .gallery-sec {
         padding: 69px 0 132px;
     }
-    .map-link,
-    .footer-frame {
-        transform: skewX(-15deg);
+    .map-link {
+        transform: skewX(0deg);
     }
-    .map-link ul,
-    .footer-frame iframe {
-        transform: skewX(15deg);
+    .map-link ul {
+        transform: skewX(0deg);
     }
     .portfolio-sec {
         margin: 0 0 60px;
     }
     .footer-frame {
-        left: 30px;
+        width: 100%;
+        left: 0;
+        transform: skewX(0deg);
+    }
+    .footer-frame iframe {
+        transform: skewX(0deg);
+        left: 0;
     }
     .map-link {
-        left: 77px;
-        width: 250px;
-        height: 160px;
-        padding: 0 0 0 20px;
+        left: 0;
+        width: 100%;
+        height: 110px;
+        padding: 0 30px;
+        justify-content: center;
+    }
+    .map-link li {
+        justify-content: center;
+        text-align: center;
     }
     .footer-menu li {
         display: block;
@@ -4602,7 +4662,7 @@ a.prev.page-numbers {
         display: block;
     }
     .top-footer {
-        padding: 54px 0 0;
+        padding: 54px 0 60px;
     }
     .service-details .service-img-wp,
     .service-img-wp {
@@ -4630,6 +4690,9 @@ a.prev.page-numbers {
     .contact-form .wpcf7 .wpcf7-spinner {
         left: 50%;
         margin: 0 0 0 75px;
+    }
+    .removal-img-wp {
+        left: -90px;
     }
 }
 
@@ -4670,19 +4733,6 @@ a.prev.page-numbers {
         padding: 20px 15px !important;
         max-height: 75vh;
     }
-    .footer-frame {
-        left: 40px;
-    }
-    .map-link li {
-        font-size: 13px;
-    }
-    .map-link li a {
-        font-size: 14px;
-    }
-    .map-link {
-        width: 210px;
-        left: 87px;
-    }
     .career-form .wpcf7 .wpcf7-spinner {
         margin: 0 0 0 122px;
     }
@@ -4691,6 +4741,9 @@ a.prev.page-numbers {
     }
     .inner-banner-content .h1-title {
         line-height: 40px;
+    }
+    .career-form .h3-title {
+        font-size: 22px;
     }
 }
 
